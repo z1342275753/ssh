@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="student" extends="struts-default">
+        <action name="login" class="com.ssh.action.StudentAction" method="login">
+            <result name="login">view/login.jsp</result>
+            <result name="index">index.jsp</result>
+        </action>
+        <action name="save" class="com.ssh.action.StudentAction" method="saveOrUpdate">
+            <result name="login">view/login.jsp</result>
+            <result name="index">index.jsp</result>
+        </action>
+        <action name="file" class="com.ssh.action.StudentAction" method="file">
+            <result name="login">view/login.jsp</result>
+            <result name="index">index.jsp</result>
+        </action>
+    </package>
+</struts>
