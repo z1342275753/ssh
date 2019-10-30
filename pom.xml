@@ -17,7 +17,7 @@
   <properties>
     <!-- 名称是任意的,建议使用有意义的名字 -->
     <spring.version>4.2.4.RELEASE</spring.version>
-    <hibernate.version>5.0.7.Final</hibernate.version>
+    <hibernate.version>5.4.5.Final</hibernate.version>
     <struts.version>2.3.24</struts.version>
   </properties>
 
@@ -50,11 +50,11 @@
         <artifactId>spring-web</artifactId>
         <version>${spring.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>${hibernate.version}</version>
-      </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
       <dependency>
         <groupId>org.apache.struts</groupId>
         <artifactId>struts2-core</artifactId>
@@ -70,6 +70,14 @@
 
   <!-- 依赖管理 -->
   <dependencies>
+    <!-- 单元测试 -->
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
+
     <!-- spring -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -208,7 +216,19 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-ehcache</artifactId>
-      <version>3.6.9.Final</version>
+      <version>5.4.6.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>compile</scope>
     </dependency>
 
   </dependencies>
@@ -233,38 +253,6 @@
 
   <build>
     <finalName>ssh</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
+
   </build>
 </project>

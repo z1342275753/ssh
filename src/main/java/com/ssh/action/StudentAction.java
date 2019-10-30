@@ -27,7 +27,7 @@ public class StudentAction {
         List<Student> students=studentService.findAll();
         for (Student s:students
              ) {
-            System.out.println(s.getId()+"-------"+s.getName());
+            System.out.println(s);
         }
         HttpServletRequest request = ServletActionContext.getRequest();
         request.setAttribute("students",students);
